@@ -11,7 +11,7 @@
  	node .\bin\www 
 ```
 ### 用法 结合Charles
-1. Charles 的 Map 功能分 Map Remote 和 Map Local两种，前者是将制定的网络请求重定向到另一个网址，MapLocal 是将制定的网络请求重定向到本地文件。 ![enter description here][1]
+1. Charles 的 Map 功能分 Map Remote 和 Map Local两种，前者是将制定的网络请求重定向到另一个网址，MapLocal 是将指定的网络请求重定向到本地文件。 ![enter description here][1]
 
 
   
@@ -66,5 +66,5 @@ postman请求 `http://115.159.24.246:8080/JsServertest.json`返回数据已经�
   [3]: http://115.159.24.246:8080/JsServertest.json
   [4]: ./images/1497863907759.jpg "1497863907759"
   [5]: ./images/1497864028831.jpg "1497864028831"
-  [6]: ./images/charles.jpg "charles"
-  [7]: ./images/charles2.jpg "charles2"
+  [6]: ./images/charles.png "charles"
+  [7]: ./images/charles2.png "charles2"
