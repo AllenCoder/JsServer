@@ -4,7 +4,7 @@
 3. 可以结合Charles 拦截代理，将线上环境的数据完整替换为本地的数据，可以方便模拟调试各种情形
 
 
-##  1. 启动nock的JsServer
+##  1. 启动mock的JsServer
  
 
 ``` javascript
@@ -16,15 +16,14 @@
 
   
 
-2. charles 配置map Remote功能 
+2. 本次直接使用charles的MapRemote功能，将charles 配置map Remote 配置参考如下：
+
 ![enter description here][2]
 
 
   
- 4. 将[http://115.159.24.246:8080/JsServertest.json][3] 
- ![enter description here][5]
- 
- 5. mock修改成本地的 ![enter description here][4]
+ 3. 将[http://115.159.24.246:8080/JsServertest.json][3]
+ ![enter description here][5]. mock修改成本地的 数据 ，区别在于修改了本地字段 **password** 为：**JsServerData**![enter description here][4]
 
 
 5. 根据需要修改自己的代码 位于（routes/index.js）
@@ -61,10 +60,10 @@ postman请求 `http://115.159.24.246:8080/JsServertest.json`返回数据已经�
 
 
 
-  [1]: ./images/1497861361904.jpg "1497861361904"
-  [2]: ./images/1497863960158.jpg "1497863960158"
+  [1]: ./images/1497861361904.jpg
+  [2]: ./images/1497863960158.jpg
   [3]: http://115.159.24.246:8080/JsServertest.json
-  [4]: ./images/1497863907759.jpg "1497863907759"
-  [5]: ./images/1497864028831.jpg "1497864028831"
-  [6]: ./images/charles.png "charles"
-  [7]: ./images/charles2.png "charles2"
+  [4]: ./images/1497863907759.jpg
+  [5]: ./images/1497864028831.jpg
+  [6]: ./images/charles.png  
+  [7]: ./images/charles2.png 
