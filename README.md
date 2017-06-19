@@ -4,7 +4,7 @@
 3. 可以结合Charles 拦截代理，将线上环境的数据完整替换为本地的数据，可以方便模拟调试各种情形
 
 
-##  ## 1. 启动nock的JsServer
+##  1. 启动nock的JsServer
  
 
 ``` javascript
