@@ -57,8 +57,8 @@ router.all('/api/users', function (req, res) {
 
 });
 
-//URL	http://mobile.9188.com/trade/godShareDetail.go
-router.all('/trade/godShareDetail.go', function (req, res) {
+
+router.all('/trade/go', function (req, res) {
     console.log(req.headers)
 
     /*
@@ -69,22 +69,19 @@ router.all('/trade/godShareDetail.go', function (req, res) {
      Content-Type	text/xml;charset=UTF-8
      Content-Encoding	gzip
      Vary	Accept-Encoding
-     Set-Cookie	JSESSIONID-CLUSTER-RBC=69A828CBBBD244898379B42B4BA13FE5; Path=/
      Pragma	no-cache
      Set-Cookie	JSESSIONID=43E6672555D36EAB234DB20C53828DD0; Path=/; HttpOnly
      THE-TIME	Monday, 19-Jun-2017 10:35:27 CST
-     X-Daa-Tunnel	hop_count=1
-     X-NWS-LOG-UUID	af599789-32df-452f-bde6-a30d1949c6d3
      Transfer-Encoding	chunked
      Proxy-Connection	Keep-alive
      */
     var date= new Date()
     res.set({
-        'Content-Type': 'text/xml;charset=UTF-8',
+        'Content-Type': 'text/json;charset=UTF-8',
         'Content-Length': '123',
         'Date': date.toDateString()
     })
-    res.sendFile('godShareDetail.go.xml', {root: path.join(__dirname, '../public/res')});
+    res.sendFile('JsServertest.json', {root: path.join(__dirname, '../public/res')});
 
 });
 module.exports = router;
