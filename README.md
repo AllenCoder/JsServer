@@ -11,19 +11,22 @@
  	node .\bin\www 
 ```
 ### 用法 结合Charles
-1. Charles 的 Map 功能分 Map Remote 和 Map Local两种，前者是将制定的网络请求重定向到另一个网址，MapLocal 是将指定的网络请求重定向到本地文件。 ![enter description here][1]
+1. Charles 的 Map 功能分 Map Remote 和 Map Local两种，前者是将制定的网络请求重定向到另一个网址，MapLocal 是将指定的网络请求重定向到本地文件。
+ <img src="./images/1497861361904.jpg" width = "270" />
 
 
   
 
 2. 本次直接使用charles的MapRemote功能，将charles 配置map Remote 配置参考如下：
+ <img src="./images/1497863960158.jpg" width = "270" />
 
-![enter description here][2]
 
 
   
- 3. 将[http://115.159.24.246:8080/JsServertest.json][3]
- ![enter description here][5]. mock修改成本地的 数据 ，区别在于修改了本地字段 **password** 为：**JsServerData**![enter description here][4]
+ 3. 将[http://115.159.24.246:8080/JsServertest.json][3]  
+  <img src="./images/1497864028831.jpg" width = "600" />
+mock修改成本地的 数据 ，区别在于修改了本地字段 **password** 为：**JsServerData**
+  <img src="./images/1497863907759.jpg" width = "600" />
 
 
 5. 根据需要修改自己的代码 位于（routes/index.js）
@@ -48,12 +51,13 @@ router.all('/test', function (req, res, next) {
 
 演示 修改本地的（public/res/JsServertest.json）
 原接口响应结果
-![charles][6]
+  <img src="./images/charles.png" width = "600" />
+
 
 
 postman请求 `http://115.159.24.246:8080/JsServertest.json`返回数据已经被修改为
+  <img src="./images/charles2.png" width = "600" />
 
-![charles][7]
 
 
 
@@ -67,3 +71,13 @@ postman请求 `http://115.159.24.246:8080/JsServertest.json`返回数据已经�
   [5]: ./images/1497864028831.jpg
   [6]: ./images/charles.png  
   [7]: ./images/charles2.png 
+  
+  
+
+``` css
+  img {
+    margin-left: auto; 
+    margin-right:auto; 
+    display:block;
+}
+```
