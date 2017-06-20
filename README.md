@@ -64,12 +64,50 @@ router.all('/test', function (req, res, next) {
 
 演示 修改本地的（public/res/JsServertest.json）
 原接口响应结果
+<div  align="center">    
   <img src="./images/charles.png" width = "600" />
+  </div>
 
 
 
 postman请求 `http://115.159.24.246:8080/JsServertest.json`返回数据已经被修改为
+  <div  align="center">    
   <img src="./images/charles2.png" width = "600" />
+  </div>
+  
+  不仅仅是可以修改返回的response的body内容还可以根据需要任意修改返回的header信息，
+  
+  
+
+``` stylus
+router.all('/trade/go', function (req, res) {
+    console.log(req.headers)
+
+    /*
+    HTTP/1.1 200 OK
+     Server	nginx
+     Date	Mon, 19 Jun 2017 02:35:26 GMT
+     Cache-Control	no-store
+     Content-Type	text/xml;charset=UTF-8
+     Content-Encoding	gzip
+     Vary	Accept-Encoding
+     Pragma	no-cache
+     Set-Cookie	JSESSIONID=43E6672555D36EAB234DB20C53828DD0; Path=/; HttpOnly
+     THE-TIME	Monday, 19-Jun-2017 10:35:27 CST
+     Transfer-Encoding	chunked
+     Proxy-Connection	Keep-alive
+     */
+    var date= new Date()
+    res.set({
+        'Content-Type': 'text/json;charset=UTF-8',
+        'Content-Length': '123',
+        'Date': date.toDateString()
+    })
+    res.sendFile('JsServertest.json', {root: path.join(__dirname, '../public/res')});
+
+});
+```
+
 
 
 
@@ -87,10 +125,4 @@ postman请求 `http://115.159.24.246:8080/JsServertest.json`返回数据已经�
   
   
 
-``` css
-  img {
-    margin-left: auto; 
-    margin-right:auto; 
-    display:block;
-}
-```
+
